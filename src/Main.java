@@ -2,39 +2,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) {
-        // Değişkenleri oluştur
-        double mat, fizik, kimya, turkce, tarih, muzik;
+        double anaPara , kdv , kdvli, kdv18 = 18, kdv8 = 8;
 
-        //Scanner sınıfımızı tanımladık
-        Scanner inp = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ücreti Giriniz : ");
+        anaPara = input.nextDouble();
 
-        //Kullanıcıdan değerleri al
-        System.out.println("Matematik Notunuz : ");
-        mat = inp.nextInt();
+        boolean kosul1 = anaPara >= 0;
+        boolean kosul2 = anaPara <= 1000;
+        boolean sonuc = kosul1 && kosul2;
 
-        System.out.println("Fizik Notunuz : ");
-        fizik = inp.nextInt();
+        System.out.println("KDV'siz Fiyat : " + anaPara);
 
-        System.out.println("Kimya Notunuz : ");
-        kimya = inp.nextInt();
+        kdv = sonuc ? kdv18 : kdv8;
+        kdvli = anaPara + ((anaPara * kdv)/1000);
 
-        System.out.println("Turkce Notunuz : ");
-        turkce = inp.nextInt();
-
-        System.out.println("Tarih Notunuz : ");
-        tarih = inp.nextInt();
-
-        System.out.println("Muzik Notunuz : ");
-        muzik = inp.nextInt();
-
-        double toplam = (mat + fizik + kimya + turkce + tarih + muzik);
-        double ortalama = toplam / 6 ;
-
-        // Bulunan sonuç ekrana yazdırıldı.
-        System.out.println("Ortalamanız = " + ortalama);
-        boolean kosul1 = ortalama >= 60;
-        System.out.println("Durum = " + (kosul1 == true ? "Geçti" : "Kaldı"));
-
-
+        System.out.println("KDV'li Fiyat : " + kdvli);
+        System.out.println("KDV tutarı : " + kdv/10);
     }
 }
