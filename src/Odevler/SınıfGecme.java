@@ -1,4 +1,4 @@
-package Pratik8;
+package Odevler;
 
 import java.util.Scanner;
 
