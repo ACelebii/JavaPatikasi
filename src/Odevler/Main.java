@@ -1,11 +1,14 @@
 package Odevler;
 
 public class Main {
-    public static void main(String[] args) {
-        for ( int k = 0; k <9; k++) {
-            System.out.println("*");
-            if ( k == 3 )
-                break;
-        }
+    public static void main (String[] args) {
+        recursiveMethod(4);
+    }
+    static void recursiveMethod(int num) {
+        num--;
+        if (num == 0)
+            return;
+        System.out.println(num + ",");
+        recursiveMethod(num);
     }
 }
