@@ -1,4 +1,4 @@
-package Pratik23;
+package Odevler;
 
 public class RecursiveFibonacciSerisi {
 

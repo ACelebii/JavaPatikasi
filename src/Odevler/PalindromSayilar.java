@@ -1,4 +1,4 @@
-package Pratik22;
+package Odevler;
 
 public class PalindromSayilar {
 
